@@ -1,4 +1,5 @@
 var log = require('../core/log');
+var _ = require('lodash');
 
 var strat = {};
 
@@ -17,6 +18,7 @@ strat.update = function(candle) {
 
 // For debugging purposes.
 strat.log = function() {
+  log.debug(this.settings.othersetting)
   log.debug('calculated random number:');
   log.debug('\t', this.randomNumber.toFixed(3));
 }
